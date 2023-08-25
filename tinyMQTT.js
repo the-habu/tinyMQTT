@@ -18,6 +18,7 @@
     this.ri = opts.reconnect_interval || 2000;
     this.wt = opts.will_topic;
     this.wp = opts.will_payload || "";
+    this.cid = opts.client_id || getSerial();
     _q = this;
   };
 
@@ -91,7 +92,7 @@
         _q.con = null;
       }
       try {
-        _q.cl.write(mqCon('traceforce.b4ng.Obsidian'));
+        _q.cl.write(mqCon(_q.cid));
         _q.emit("connected");
         _q.cn = true;
         _q.x1 = setInterval(function() {
