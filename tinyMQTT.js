@@ -91,7 +91,7 @@
         _q.con = null;
       }
       try {
-        _q.cl.write(mqCon(getSerial()));
+        _q.cl.write(mqCon('HabuTest'));
         _q.emit("connected");
         _q.cn = true;
         _q.x1 = setInterval(function() {
