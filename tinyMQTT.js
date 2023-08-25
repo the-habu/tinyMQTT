@@ -91,7 +91,7 @@
         _q.con = null;
       }
       try {
-        _q.cl.write(mqCon('HabuTest'));
+        _q.cl.write(mqCon('traceforce.b4ng.Obsidian'));
         _q.emit("connected");
         _q.cn = true;
         _q.x1 = setInterval(function() {
